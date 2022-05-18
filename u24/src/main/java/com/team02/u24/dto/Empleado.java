@@ -11,6 +11,8 @@ package com.team02.u24.dto;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -123,7 +125,35 @@ public class Empleado {
 			return "Empleado [id=" + id + ", nombre=" + nombre + ", trabajo=" + trabajo + ", salario=" + salario + "]";
 		}
 		
-		
+		public enum Trabajos
+		{
+			
+			TRABAJO_1("Trabajo 1", 1221), TRABAJO_2("Trabajo 3", 1233),
+			TRABAJO_3("Trabajo 2", 1222), TRABAJO_4("Trabajo 4", 1234); 
+			
+			private String trabajo;
+			private int salario;
+			
+			private Trabajos(String trabajo, int salario){
+				this.trabajo = trabajo;
+				this.salario = salario;
+				
+			}
+
+			public String getTrabajo(){
+				
+				return trabajo;
+				
+			}
+
+			public int getSalario(){
+				
+				return salario;
+				
+			}	
+			
+			
+		}
 		
 
 }
