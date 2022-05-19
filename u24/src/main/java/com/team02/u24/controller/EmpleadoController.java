@@ -36,19 +36,20 @@ public class EmpleadoController {
 	EmpleadoServiceImpl empleadoServiceImpl;
 	
 	@GetMapping("/empleados")
+	//lista los empleados 
 	public List<Empleado> listarEmpleados(){
 		
 		return empleadoServiceImpl.listarEmpleados();
 		
 	}
-	
+	//lista los nombres de los clientes
 	@GetMapping("/empleados/nombre/{nombre}")
 	public List<Empleado> listarClienteNombre(@PathVariable(name="nombre") String nombre) {
 	    
 		return empleadoServiceImpl.listarEmpleadoNombre(nombre);
 		
 	}
-	
+	//Crea el trabajo i el trabajador junto al salario si no exsisten si exsisten no la crea
 	@PostMapping("/empleados")
 	public Empleado salvarEmpleado(@RequestBody Empleado empleado) {
 		
@@ -79,7 +80,7 @@ public class EmpleadoController {
 			
 		return empleadoServiceImpl.guardarEmpleado(empleado);
 	}
-
+	//Retorna el servicio del empleado
 	@GetMapping("/empleados/{id}")
 	public Empleado empleadoXID(@PathVariable(name = "id") Long id) {
 		
@@ -89,7 +90,7 @@ public class EmpleadoController {
 		
 		return empleado_xid;
 	}
-
+	// clase para  eliminar el empleado por id
 	@PutMapping("/empleado/{id}")
 	public void actualizarEmpleado(@PathVariable(name = "id") Long id) {
 		

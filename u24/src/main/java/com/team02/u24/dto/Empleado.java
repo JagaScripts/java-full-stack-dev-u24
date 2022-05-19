@@ -125,6 +125,7 @@ public class Empleado {
 			return "Empleado [id=" + id + ", nombre=" + nombre + ", trabajo=" + trabajo + ", salario=" + salario + "]";
 		}
 		
+		//enumera los trabajos 
 		public enum Trabajos
 		{
 			
@@ -133,7 +134,7 @@ public class Empleado {
 			
 			private String trabajo;
 			private int salario;
-			
+			//asigna los trabajos a un salario
 			private Trabajos(String trabajo, int salario){
 				this.trabajo = trabajo;
 				this.salario = salario;
