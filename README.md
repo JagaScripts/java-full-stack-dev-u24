@@ -3,4 +3,10 @@ Este repositorio corresponde al ejercicio 1 realizado en la formación de Java F
 
 POSTMAN
 
+GET EMPLEADOS
+
 ![image](https://github.com/JagaScripts/java-full-stack-dev-u24/blob/master/postmantGetEmpleados.JPG)
+
+GET POR ID
+
+![image](https://github.com/JagaScripts/java-full-stack-dev-u24/blob/master/postmantGetEmpleadosXID.JPG)
